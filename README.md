@@ -16,7 +16,13 @@ To run the docker command without sudo, user need to have [docker group membersh
 Introduce how to download the processed data to be used for UC2.
 
 ## Pretraining
-Once the user set up the data and checkpoints properly, please  run the following code to conduct pretraining.
+1. Once the user set up the data and checkpoints properly, please  run the following command to launch a docker container and start the pretraining process.
 ```
 source launch_container_pretrain.sh /PATH_TO_STORAGE/txt_db /PATH_TO_STORAGE/img_db /PATH_TO_STORAGE/finetune /PATH_TO_STORAG/pretrained
 ```
+2. If the user wants to run pretraining inside the container interactively, please use the  following  command:
+```
+horovodrun -np $N_GPU python pretrain.py  --config/uc2_pretrain.json
+```
+## Downstream Task Finetuning
+**Text-to-Image Retrieval**
