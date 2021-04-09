@@ -16,7 +16,7 @@ To run the docker command without sudo, user need to have [docker group membersh
 Introduce how to download the processed data to be used for UC2.
 
 ## Pretraining
-Once the user set up the data and checkpoints properly, please  run t he following code to conduct pretraining.
+Once the user set up the data and checkpoints properly, please  run the following code to conduct pretraining.
 ```
 source launch_container_pretrain.sh /PATH_TO_STORAGE/txt_db /PATH_TO_STORAGE/img_db /PATH_TO_STORAGE/finetune /PATH_TO_STORAG/pretrained
 ```
