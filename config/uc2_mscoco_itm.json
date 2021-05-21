@@ -1,0 +1,112 @@
+{
+    "compressed_db": false,
+    "checkpoint": "/pretrain/uc2/ckpt/best.pt",
+    "output_dir": "/storage/uc2_mscoco_all_lan",
+    "max_txt_len": 60,
+    "conf_th": 0.2,
+    "max_bb": 100,
+    "min_bb": 10,
+    "num_bb": 36,
+    "train_batch_size": 40,
+    "negative_size": 1,
+    "hard_neg_size": 0,
+    "hard_neg_pool_size": 20,
+    "steps_per_hard_neg": -1,
+    "inf_minibatch_size": 300,
+    "margin": 0.2,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 0.0001,
+    "xlmr_lr": 1e-07,
+    "valid_steps": 10000,
+    "num_train_steps": 50000,
+    "optim": "adamw",
+    "betas": [
+        0.9,
+        0.98
+    ],
+    "decay": "linear",
+    "dropout": 0.1,
+    "weight_decay": 0,
+    "grad_norm": 2.0,
+    "warmup_steps": 5000,
+    "seed": 42,
+    "full_val": false,
+    "fp16": true,
+    "n_workers": 4,
+    "pin_mem": false,
+    "rename_checkpoints": false,
+    "separate_lr": false,
+    "load_embedding_only": false,
+    "load_layer": 0,
+    "save_steps": 200,
+    "train_txt_dbs": [
+        "/db/uc2_mscoco/itm_coco_en_train.db/",
+        "/db/uc2_mscoco/itm_coco_en_restval.db/",
+        "/db/uc2_mscoco/itm_coco_ja_train.db/",
+        "/db/uc2_mscoco/itm_coco_zh_train.db/"
+
+    ],
+    "train_img_dbs": [
+        "/img/coco_train2014/",
+        "/img/coco_val2014/",
+        "/img/coco_train2014/",
+        [
+            "/img/coco_train2014/",
+            "/img/coco_val2014/"
+        ]
+
+    ],
+    "val_txt_db": [
+        "/db/uc2_mscoco/itm_coco_en_val.db/"
+    ],
+    "val_img_db": [
+        "/img/coco_val2014/"
+    ],
+    "test_txt_db": [
+        "/db/uc2_mscoco/itm_coco_en_test_1k_0.db/",
+        "/db/uc2_mscoco/itm_coco_en_test_1k_1.db/",
+        "/db/uc2_mscoco/itm_coco_en_test_1k_2.db/",
+        "/db/uc2_mscoco/itm_coco_en_test_1k_3.db/",
+        "/db/uc2_mscoco/itm_coco_en_test_1k_4.db/",
+        "/db/uc2_mscoco/itm_coco_ja_test_1k_0.db/",
+        "/db/uc2_mscoco/itm_coco_ja_test_1k_1.db/",
+        "/db/uc2_mscoco/itm_coco_ja_test_1k_2.db/",
+        "/db/uc2_mscoco/itm_coco_ja_test_1k_3.db/",
+        "/db/uc2_mscoco/itm_coco_ja_test_1k_4.db/",
+        "/db/uc2_mscoco/itm_coco_zh_test_xlmr.db/"
+    ],
+    "test_img_db": [
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        "/img/coco_val2014/",
+        [
+            "/img/coco_train2014/",
+            "/img/coco_val2014/"
+        ]
+
+    ],
+    "model_config": "config/vl-xlmr-base.json",
+    "mcan": false,
+    "cut_bert": -1,
+    "neg_sample_from": "i",
+    "train_neg_sample_p": 0.67,
+    "train_neg_sample_size": 1,
+    "val_minibatch_size": 400,
+    "test_minibatch_size": 400,
+    "train_loss": "rank",
+    "img_rank_weight": 1.0,
+    "txt_rank_weight": 1.0,
+    "no_cuda": false,
+    "local_rank": 0,
+    "wave_length": 1000,
+    "val_batch_size": 4096,
+    "eval_method": "rank",
+    "rank": 0
+}

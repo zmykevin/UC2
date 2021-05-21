@@ -1,0 +1,211 @@
+{
+    "compressed_db": false,
+    "model_config": "config/uc2-base.json",
+    "checkpoint": "/pretrain/xlm-roberta-base/pytorch_model.bin",
+    "output_dir": "/storage/uc2_pretrain",
+    "mrm_prob": 0.15,
+    "neg_size": 128,
+    "nce_temp": 1.0,
+    "itm_neg_prob": 0.5,
+    "itm_ot_lambda": 0.0,
+    "ot_pos_only": false,
+    "max_txt_len": 60,
+    "conf_th": 0.2,
+    "max_bb": 100,
+    "min_bb": 10,
+    "num_bb": 36,
+    "train_batch_size": 10240,
+    "val_batch_size": 10240,
+    "gradient_accumulation_steps": 3,
+    "learning_rate": 4e-05,
+    "valid_steps": 5000,
+    "num_train_steps": 200000,
+    "optim": "adamw",
+    "betas": [
+        0.9,
+        0.98
+    ],
+    "decay": "linear",
+    "dropout": 0.1,
+    "weight_decay": 0.01,
+    "grad_norm": 5.0,
+    "warmup_steps": 10000,
+    "seed": 42,
+    "fp16": true,
+    "n_workers": 4,
+    "pin_mem": true,
+    "rename_checkpoints": false,
+    "itm_hard_neg": false,
+    "co_masking": true,
+    "co_masking_mode": "mix",
+    "save_steps": 200,
+    "early_adaptation": true,
+    "early_adaptation_checkpoint": "/pretrain/early_adaptation_multilingual/ckpt/best.pt",
+    "multilingual_vmlm": true,
+    "train_datasets": [
+        {
+            "name": "cc",
+            "db": [
+                "/db/uc2_pretrain/conceptual_caption_en_train.db",
+                "/db/uc2_pretrain/conceptual_caption_de_train.db",
+                "/db/uc2_pretrain/conceptual_caption_zh_trian.db",
+                "/db/uc2_pretrain/conceptual_caption_ja_train.db",
+                "/db/uc2_pretrain/conceptual_caption_fr_train.db",
+                "/db/uc2_pretrain/conceptual_caption_cs_train.db"
+            ],
+            "img": [
+                "/img/gcc_train",
+                "/img/gcc_train",
+                "/img/gcc_train",
+                "/img/gcc_train",
+                "/img/gcc_train",
+                "/img/gcc_train"
+            ],
+            "tasks": [
+                "itm",
+                "mlm",
+                "vmlm"
+            ],
+            "img_token_soft_label": [
+                "/data/UNITER_DATA/UNITER_CC_Dataset/IMG_DB/gcc_train/train_img_token_soft_label_batch.db"
+            ],
+            "mix_ratio": [
+                9,
+                12,
+                9
+            ]
+        },
+        {
+            "name": "cc_paired",
+            "db": [
+                "/db/uc2_pretrain/conceptual_caption_ende_train.db/",
+                "/db/uc2_pretrain/conceptual_caption_enzh_train.db/",
+                "/db/uc2_pretrain/conceptual_caption_enja_train.db/",
+                "/db/uc2_pretrain/conceptual_caption_encs_train.db/",
+                "/db/uc2_pretrain/conceptual_caption_enfr_train.db/"
+            ],
+            "img": [
+                "/img/gcc_train",
+                "/img/gcc_train",
+                "/img/gcc_train",
+                "/img/gcc_train",
+                "/img/gcc_train"
+            ],
+            "tasks": [
+                "tlm"
+            ],
+            "img_token_soft_label": [
+                "/data/UNITER_DATA/UNITER_CC_Dataset/IMG_DB/gcc_train/train_img_token_soft_label_batch.db"
+            ],
+            "mix_ratio": [
+                3
+            ]
+        }
+    ],
+    "val_datasets": [
+        {
+            "name": "cc_en",
+            "db": [
+                "/db/uc2_pretrain/conceptual_caption_en_val.db/"
+            ],
+            "img": [
+                "/img/gcc_val"
+            ],
+            "img_token_soft_label": [
+                "/data/UNITER_DATA/UNITER_CC_Dataset/IMG_DB/gcc_val/val_img_token_soft_label_batch.db"
+            ],
+            "tasks": [
+                "itm",
+                "mlm",
+                "vmlm"
+            ]
+        },
+        {
+            "name": "cc_de",
+            "db": [
+                "/db/uc2_pretrain/conceptual_caption_de_val.db/"
+            ],
+            "img": [
+                "/img/gcc_val"
+            ],
+            "img_token_soft_label": [
+                "/data/UNITER_DATA/UNITER_CC_Dataset/IMG_DB/gcc_val/val_img_token_soft_label_batch.db"
+            ],
+            "tasks": [
+                "itm",
+                "mlm",
+                "vmlm"
+            ]
+        },
+        {
+            "name": "cc_zh",
+            "db": [
+                "/db/uc2_pretrain/conceptual_caption_zh_val.db/"
+            ],
+            "img": [
+                "/img/gcc_val"
+            ],
+            "img_token_soft_label": [
+                "/data/UNITER_DATA/UNITER_CC_Dataset/IMG_DB/gcc_val/val_img_token_soft_label_batch.db"
+            ],
+            "tasks": [
+                "itm",
+                "mlm",
+                "vmlm"
+            ]
+        },
+        {
+            "name": "cc_ja",
+            "db": [
+                "/db/uc2_pretrain/conceptual_caption_ja_val.db/"
+            ],
+            "img": [
+                "/img/gcc_val"
+            ],
+            "img_token_soft_label": [
+                "/data/UNITER_DATA/UNITER_CC_Dataset/IMG_DB/gcc_val/val_img_token_soft_label_batch.db"
+            ],
+            "tasks": [
+                "itm",
+                "mlm",
+                "vmlm"
+            ]
+        },
+        {
+            "name": "cc_fr",
+            "db": [
+                "/db/uc2_pretrain/conceptual_caption_fr_val.db/"
+            ],
+            "img": [
+                "/img/gcc_val"
+            ],
+            "img_token_soft_label": [
+                "/data/UNITER_DATA/UNITER_CC_Dataset/IMG_DB/gcc_val/val_img_token_soft_label_batch.db"
+            ],
+            "tasks": [
+                "itm",
+                "mlm",
+                "vmlm"
+            ]
+        },
+        {
+            "name": "cc_cs",
+            "db": [
+                "/db/uc2_pretrain/conceptual_caption_cs_val.db/"
+            ],
+            "img": [
+                "/img/gcc_val"
+            ],
+            "img_token_soft_label": [
+                "/data/UNITER_DATA/UNITER_CC_Dataset/IMG_DB/gcc_val/val_img_token_soft_label_batch.db"
+            ],
+            "tasks": [
+                "itm",
+                "mlm",
+                "vmlm"
+            ]
+        },
+    ],
+    "ans2label": "",
+    "rank": 0
+}
