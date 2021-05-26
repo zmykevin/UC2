@@ -17,7 +17,7 @@ Download the pre-processed text features and pretrained checkpoints with the fol
 wget https://mmaisharables.blob.core.windows.net/uc2/UC2_DATA.tar.gz
 
 ```
-The image features for mscoco can be obtained from [UNITER]!(https://github.com/ChenRocks/UNITER) via this [code script]!(https://github.com/ChenRocks/UNITER/blob/master/scripts/download_itm.sh). As CC's image features are large and inconvient for direct downloading, please contact UNITER's author to obtain the image features if you are interested in pretraining.
+The image features for mscoco can be obtained from [UNITER](https://github.com/ChenRocks/UNITER) via this [code script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_itm.sh). As CC's image features are large and inconvient for direct downloading, please contact UNITER's author to obtain the image features if you are interested in pretraining.
 
 ## Launch the Docker Container for Experiments
 Once the user set up the data and checkpoints properly, please  run the following command to launch a docker container and start the pretraining process.
@@ -52,7 +52,7 @@ url = {https://www.microsoft.com/en-us/research/publication/uc2-universal-cross-
 ```
 
 ## Acknowledge
-Our code is mainly based on [Linjie Li]!(https://www.microsoft.com/en-us/research/people/linjli/) and [Yen-Chun Chen]!(https://www.microsoft.com/en-us/research/people/yenche/)'s project [UNITER]!(https://github.com/ChenRocks/UNITER). We thank the author for opening source their code and providing helful discussion for code implementation. Portions of the code also uses resources from [transformers]!(https://github.com/huggingface/transformers).
+Our code is mainly based on [Linjie Li](https://www.microsoft.com/en-us/research/people/linjli/) and [Yen-Chun Chen](https://www.microsoft.com/en-us/research/people/yenche/)'s project [UNITER](https://github.com/ChenRocks/UNITER). We thank the author for opening source their code and providing helful discussion for code implementation. Portions of the code also uses resources from [transformers](https://github.com/huggingface/transformers).
 
 ## Liscense
 MIT
