@@ -12,8 +12,12 @@ We Provide a Docker image to run our code. Please install the following:
 To run the docker command without sudo, user need to have [docker group membership](https://docs.docker.com/engine/install/linux-postinstall/). Our code only supports Linux with NVIDIA GPUs. We test our code on Ubuntu 18.04 and V100 cards.
 
 ## Data and Pretrained Checkpoints
+Download the pre-processed text features and pretrained checkpoints with the following command:
+```
+wget https://mmaisharables.blob.core.windows.net/uc2/UC2_DATA.tar.gz
 
-Introduce how to download the processed data to be used for UC2.
+```
+The image features for mscoco can be obtained from [UNITER]!(https://github.com/ChenRocks/UNITER) via this [code script]!(https://github.com/ChenRocks/UNITER/blob/master/scripts/download_itm.sh). As CC's image features are large and inconvient for direct downloading, please contact UNITER's author to obtain the image features if you are interested in pretraining.
 
 ## Launch the Docker Container for Experiments
 Once the user set up the data and checkpoints properly, please  run the following command to launch a docker container and start the pretraining process.
