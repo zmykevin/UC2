@@ -73,7 +73,7 @@
         "/db/uc2_mscoco/itm_coco_ja_test_1k_2.db/",
         "/db/uc2_mscoco/itm_coco_ja_test_1k_3.db/",
         "/db/uc2_mscoco/itm_coco_ja_test_1k_4.db/",
-        "/db/uc2_mscoco/itm_coco_zh_test_xlmr.db/"
+        "/db/uc2_mscoco/itm_coco_zh_test.db/"
     ],
     "test_img_db": [
         "/img/coco_val2014/",
@@ -92,7 +92,7 @@
         ]
 
     ],
-    "model_config": "config/vl-xlmr-base.json",
+    "model_config": "config/uc2-base.json",
     "mcan": false,
     "cut_bert": -1,
     "neg_sample_from": "i",
