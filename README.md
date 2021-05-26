@@ -50,4 +50,5 @@ url = {https://www.microsoft.com/en-us/research/publication/uc2-universal-cross-
 ## Acknowledge
 Our code is mainly based on [Linjie Li]!(https://www.microsoft.com/en-us/research/people/linjli/) and [Yen-Chun Chen]!(https://www.microsoft.com/en-us/research/people/yenche/)'s project [UNITER]!(https://github.com/ChenRocks/UNITER). We thank the author for opening source their code and providing helful discussion for code implementation. Portions of the code also uses resources from [transformers]!(https://github.com/huggingface/transformers).
 
-
+## Liscense
+MIT
