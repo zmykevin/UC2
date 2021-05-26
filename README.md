@@ -2,6 +2,7 @@
 [UC2: Universal Cross-lingual Cross-modal Vision-and-Language Pre-training](https://arxiv.org/abs/2104.00332)
 <br/>
 Mingyang Zhou, [Luowei Zhou](https://luoweizhou.github.io/), [Shuohang Wang](https://www.microsoft.com/en-us/research/people/shuowa/), [Yu Cheng](https://sites.google.com/site/chengyu05), [Linjie Li](https://www.microsoft.com/en-us/research/people/linjli/), [Zhou Yu](http://www.cs.columbia.edu/~zhouyu/), [Jingjing Liu](https://www.linkedin.com/in/jingjing-liu-65703431/)
+<br/>
 This  is the official repository of  UC2, a multili-lingual multi-modal pre-training framefork. In this repository we support end-to-end pretraining and finetuning for image-text retrieval on COCO. 
 
 ### Requirements
