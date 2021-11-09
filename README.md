@@ -21,6 +21,9 @@ wget https://mmaisharables.blob.core.windows.net/uc2/UC2_DATA.tar.gz
 ```
 The image features for mscoco can be obtained from [UNITER](https://github.com/ChenRocks/UNITER) via this [code script](https://github.com/ChenRocks/UNITER/blob/master/scripts/download_itm.sh). As CC's image features are large and inconvient for direct downloading, please contact UNITER's author to obtain the image features if you are interested in pretraining.
 
+The text translation of CC captions for pre-training purpose can be also found here:
+https://drive.google.com/drive/folders/1K6dGXMz8egutKk-UTXbFrp3HQ9QqPfmM?usp=sharing
+
 ## Launch the Docker Container for Experiments
 Once the user set up the data and checkpoints properly, please  run the following command to launch a docker container and start the pretraining process.
 ```
